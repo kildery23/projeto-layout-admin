@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family= Inter: wght @300;500;700 & display=swap');
+
+  :root {
+    --cinza-escuro: #1e293b;
+    --cinza-houver: #24262b;
+    --cinza-claro: rgb(105,105,105);
+    --cinza-mais-claro: #ddd;
+    --branco-neutro: #eee;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sem serifa;
+}
+
+.container {
+    background-color: var(--branco-neutro);
+    height: 100vh;
+    display: flex;
+}
+
+  /*** Barra lateral *******/
+
+  .barra-lateral {
+    width: 200px;
+    height: 100vh;
+    background-color: var(--cinza-escuro);
+    background-image: linear-gradient(var(--cinza-escuro),var(--cinza-claro));
+  }
+
+  .barra-lateral .logo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .barra-lateral .logo img {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+
+  .barra-lateral .logo h1 {
+    color: var(--branco-neutro);
+    font-size: 20px;
+  }
+
+  .menu-lateral ul {
+    list-style: none;
+  }
+
+  .menu-lateral ul a {
+    text-decoration: none;
+    color: var(--branco-neutro);
+    display: block;
+    padding: 15px;
+    border-bottom: dotted 1px var(--cinza-claro);
+    margin: 0 20px;
+  }
+
+  .menu-lateral ul a i {
+    margin: 0 10px;
+  }
+
+  .menu-lateral ul a:hover{
+    background-color: var(--cinza-houver);
+  }
+
+  .menu-lateral .ativo{
+    background-color: var(--cinza-houver);
+  }
+
+  /*** conteudo **********/
+   
+  .conteudo {
+    background-color: white;
+    height: 100vh;
+    width:calc(100% - 170px);
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .topo{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    box-shadow: 0 0 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  .btconta{
+    cursor: pointer;
+    position: relative;
+  }
+
+  .btconta .dropdown{
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-color: var(--cinza-escuro);
+    box-shadow: -3px 3px 5px var(--cinza-claro);
+    top: 30px;
+    left: -50px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 5px;
+  }
+
+  .btconta:hover .dropdown{
+    height: 150px;
+  }
+
+  .btconta .dropdown ul {
+    list-style: none;
+    margin: 0 15px;
+    margin-top: 10px;
+  }
+
+  .btconta .dropdown a {
+    color: var(--branco-neutro);
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    font-size: 12px;
+    border-bottom: dotted 1px var(--cinza-claro);
+  }
+
+  .btconta .dropdown a:hover {
+    background-color: var(--cinza-claro);
+  }
+
+  .corpo {
+    padding: 30px;
+    overflow: auto;
+  }
+
+  .tabela {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .tabela thead {
+    background-color: var(--cinza-escuro);
+    color: var(--branco-neutro);
+  }
+
+  .tabela th {
+    padding: 10px;
+  }
+
+  .tabela td {
+    padding: 7px;
+    text-align: center;
+  }
+
+   .tabela tr:nth-child(even) {
+    background-color: var(--cinza-mais-claro);
+   }
+
+   .tabela button {
+    width: 35px;
+    padding: 5px;
+   }
+  
+
+  
